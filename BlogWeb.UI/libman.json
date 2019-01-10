@@ -1,0 +1,67 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@4.1.3",
+      "destination": "wwwroot/lib/bootstrap/dist/",
+      "files": [
+        "css/bootstrap.css",
+        "css/bootstrap.min.css",
+        "js/bootstrap.js",
+        "js/bootstrap.min.js"
+      ]
+    },
+    {
+      "library": "jquery@3.3.1",
+      "destination": "wwwroot/lib/jquery/",
+      "files": [
+        "jquery.js",
+        "jquery.min.js"
+      ]
+    },
+    {
+      "library": "jquery-validate@1.19.0",
+      "destination": "wwwroot/lib/jquery-validation/",
+      "files": [
+        "jquery.validate.js",
+        "jquery.validate.min.js"
+      ]
+    },
+    {
+      "library": "jquery-validation-unobtrusive@3.2.11",
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/",
+      "files": [
+        "jquery.validate.unobtrusive.js",
+        "jquery.validate.unobtrusive.min.js"
+      ]
+    },
+    {
+      "library": "animate.css@3.7.0",
+      "destination": "wwwroot/lib/animate/",
+      "files": [
+        "animate.css",
+        "animate.min.css"
+      ]
+    },
+    {
+      "library": "moment.js@2.23.0",
+      "destination": "wwwroot/lib/moment/dist/",
+      "files": [
+        "moment-with-locales.js",
+        "moment-with-locales.min.js",
+        "moment.js",
+        "moment.min.js"
+      ]
+    },
+    {
+      "library": "font-awesome@4.7.0",
+      "destination": "wwwroot/lib/fontawesome/dist/",
+      "files": [
+        "css/font-awesome.css",
+        "css/font-awesome.min.css"
+      ]
+
+    }
+  ]
+}

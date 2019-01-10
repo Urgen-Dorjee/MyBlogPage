@@ -1,0 +1,9 @@
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\CommonShared\bin\Debug\netstandard2.0\CommonShared.deps.json
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\CommonShared\bin\Debug\netstandard2.0\CommonShared.dll
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\CommonShared\bin\Debug\netstandard2.0\CommonShared.pdb
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\CommonShared\obj\Debug\netstandard2.0\CommonShared.csprojAssemblyReference.cache
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\CommonShared\obj\Debug\netstandard2.0\CommonShared.csproj.CoreCompileInputs.cache
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\CommonShared\obj\Debug\netstandard2.0\CommonShared.AssemblyInfoInputs.cache
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\CommonShared\obj\Debug\netstandard2.0\CommonShared.AssemblyInfo.cs
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\CommonShared\obj\Debug\netstandard2.0\CommonShared.dll
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\CommonShared\obj\Debug\netstandard2.0\CommonShared.pdb

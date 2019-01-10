@@ -1,0 +1,4 @@
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\BlogWeb.UI\obj\Debug\netcoreapp2.1\BlogWeb.UI.csprojAssemblyReference.cache
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\BlogWeb.UI\obj\Debug\netcoreapp2.1\BlogWeb.UI.csproj.CoreCompileInputs.cache
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\BlogWeb.UI\obj\Debug\netcoreapp2.1\BlogWeb.UI.AssemblyInfoInputs.cache
+C:\Users\urgen\Desktop\Technology\TechBloggingWebSite\BlogWeb.UI\obj\Debug\netcoreapp2.1\BlogWeb.UI.AssemblyInfo.cs

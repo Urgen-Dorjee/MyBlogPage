@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PostDto>
+
+@using System.Collections.Generic
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    ViewData["Title"] = "Home Page";
+
+
+
+}
+
+<div class="container">
+    @if (Model.Any())
+    {
+        <div class="post-items-row row">
+            @foreach (var post in Model)
+            {
+                <div class="post-item col-md-4">
+
+                    @await Html.PartialAsync("_postpage", post)
+                </div>
+            }
+
+        </div>
+    }
+    else
+    {
+        <div class="post-items-row row">
+            <p>THERE IS NO DATA/POST TO DISPLAY</p>
+        </div>
+    }
+
+</div>
+
