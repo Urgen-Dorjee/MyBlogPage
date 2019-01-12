@@ -29,6 +29,11 @@ namespace Application.Queries.Services
             return _mapper.Map<PostDto>(await _postRepo.GetPostBySlug(slug));
         }
 
+        public async Task<bool> IsTitleAlreadyExists(string slug, int id)
+        {
+            return await _postRepo.IsTitleAlreadyExists(slug, id);
+        }
+
         public async Task<List<PostDto>> ListAllPostMediator(int num)
         {
             return _mapper.Map<List<PostDto>>(await _postRepo.GetAllPostQuery(num));

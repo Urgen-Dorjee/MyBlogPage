@@ -13,5 +13,7 @@ namespace Application.Interfaces
        // IEnumerable<T> ListAllPost();
         Task<List<Post>> GetAllPostQuery(int num);
         Task<Post> GetPostBySlug(string slug);
+        Task<Post> CreatePostRepository(Post post);
+        Task<bool> IsTitleAlreadyExists(string slug, int id);
     }
 }

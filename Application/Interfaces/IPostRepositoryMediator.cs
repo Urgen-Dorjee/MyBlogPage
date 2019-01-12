@@ -1,4 +1,5 @@
-﻿using Application.Queries.GetAllPosts;
+﻿using Application.Commands.Models;
+using Application.Queries.GetAllPosts;
 using Application.Queries.Models;
 using Domain.Entities;
 using System;
@@ -13,5 +14,6 @@ namespace Application.Interfaces
     {
         Task<List<PostDto>> ListAllPostMediator(int num);
         Task<PostDto> GetPostBySlug(string slug);
+        Task<bool> IsTitleAlreadyExists(string slug, int id);
     }
 }

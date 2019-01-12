@@ -18,6 +18,13 @@ namespace Infrastructure.RepositoryService
             _context = context;
         }
 
+        public async Task<Post> CreatePostRepository(Post post)
+        {
+            _context.Posts.Add(post);
+            await _context.SaveChangesAsync();
+            return post;
+        }
+
         public void Dispose()
         {
             _context.Dispose();
@@ -36,6 +43,12 @@ namespace Infrastructure.RepositoryService
         public async Task<Post> GetPostBySlug(string slug)
         {
             return await _context.Posts.FirstOrDefaultAsync(p => p.Slug == slug);
+        }
+
+        public async Task<bool> IsTitleAlreadyExists(string slug, int id)
+        {
+            return await _context.Posts.AsNoTracking()
+                   .AnyAsync(a => a.Slug == slug && a.Id != id);
         }
     }
 }

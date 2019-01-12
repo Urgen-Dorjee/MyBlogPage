@@ -1,17 +1,23 @@
 ﻿@model PostDto
 
 
-@{
-
-    ViewData["Title"] = "Blog Details";
+@{ 
+   ViewData["Title"] = "Blog Details";
 }
 
-
 <div class="container">
+    <h3 class="post-detail-header">
+        <span>@Model.Topic</span>
+    </h3>
+    <div class="post-authorname">
+        <span>Published By: @Model.AuthorName</span>
+        <span class="timeStampValue" data-value="@Model.Published">Published Date: @Model.Published</span>
+    </div>    
 
-    <div class="post-detail-header">
-        @Model.Topic
+    <markdown markdown="Content" />       
+
+    <div class="main-content">
+        @Model.Content
     </div>
-    
-    
+
 </div>
