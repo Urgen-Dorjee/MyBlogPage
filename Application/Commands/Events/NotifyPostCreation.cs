@@ -14,7 +14,6 @@ namespace Application.Commands.Events
         {
             Post = post;
         }
-
         public Post Post { get; }
     }
 }

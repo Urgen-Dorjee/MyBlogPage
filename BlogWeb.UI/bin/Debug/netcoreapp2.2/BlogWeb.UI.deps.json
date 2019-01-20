@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "6d650b8e3aff64abb1709d92c0f3d3a6c3d5b5b2"
+    "signature": "caf688f149eee66efad3b4d5fec3e13d21e5e62c"
   },
   "compilationOptions": {
     "defines": [
@@ -27,9 +27,10 @@
           "Application": "1.0.0",
           "AutoMapper": "8.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.0.0",
+          "ButterCMS": "1.3.4",
           "CommonShared": "1.0.0",
           "HtmlSanitizer": "4.0.199",
-          "Humanizer": "2.5.1",
+          "Humanizer": "2.5.16",
           "Infrastructure": "1.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "6.0.1",
           "Microsoft.AspNetCore.App": "2.2.0",
@@ -40,7 +41,7 @@
           "NWebsec.AspNetCore.Mvc.TagHelpers": "2.0.0",
           "NodaTime": "2.4.4",
           "Persistence": "1.0.0",
-          "Westwind.AspNetCore.Markdown": "3.0.36"
+          "Westwind.AspNetCore.Markdown": "3.2.2"
         },
         "runtime": {
           "BlogWeb.UI.dll": {}
@@ -109,6 +110,21 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "ButterCMS/1.3.4": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "System.Net.Http": "4.3.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ButterCMS.dll": {
+            "assemblyVersion": "1.3.4.0",
+            "fileVersion": "1.3.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ButterCMS.dll": {}
+        }
+      },
       "HtmlSanitizer/4.0.199": {
         "dependencies": {
           "AngleSharp": "0.9.11"
@@ -123,64 +139,66 @@
           "lib/netstandard2.0/HtmlSanitizer.dll": {}
         }
       },
-      "Humanizer/2.5.1": {
+      "Humanizer/2.5.16": {
         "dependencies": {
-          "Humanizer.Core.af": "2.5.1",
-          "Humanizer.Core.ar": "2.5.1",
-          "Humanizer.Core.bg": "2.5.1",
-          "Humanizer.Core.bn-BD": "2.5.1",
-          "Humanizer.Core.cs": "2.5.1",
-          "Humanizer.Core.da": "2.5.1",
-          "Humanizer.Core.de": "2.5.1",
-          "Humanizer.Core.el": "2.5.1",
-          "Humanizer.Core.es": "2.5.1",
-          "Humanizer.Core.fa": "2.5.1",
-          "Humanizer.Core.fi-FI": "2.5.1",
-          "Humanizer.Core.fr": "2.5.1",
-          "Humanizer.Core.fr-BE": "2.5.1",
-          "Humanizer.Core.he": "2.5.1",
-          "Humanizer.Core.hr": "2.5.1",
-          "Humanizer.Core.hu": "2.5.1",
-          "Humanizer.Core.id": "2.5.1",
-          "Humanizer.Core.it": "2.5.1",
-          "Humanizer.Core.ja": "2.5.1",
-          "Humanizer.Core.lv": "2.5.1",
-          "Humanizer.Core.nb": "2.5.1",
-          "Humanizer.Core.nb-NO": "2.5.1",
-          "Humanizer.Core.nl": "2.5.1",
-          "Humanizer.Core.pl": "2.5.1",
-          "Humanizer.Core.pt": "2.5.1",
-          "Humanizer.Core.ro": "2.5.1",
-          "Humanizer.Core.ru": "2.5.1",
-          "Humanizer.Core.sk": "2.5.1",
-          "Humanizer.Core.sl": "2.5.1",
-          "Humanizer.Core.sr": "2.5.1",
-          "Humanizer.Core.sr-Latn": "2.5.1",
-          "Humanizer.Core.sv": "2.5.1",
-          "Humanizer.Core.tr": "2.5.1",
-          "Humanizer.Core.uk": "2.5.1",
-          "Humanizer.Core.uz-Cyrl-UZ": "2.5.1",
-          "Humanizer.Core.uz-Latn-UZ": "2.5.1",
-          "Humanizer.Core.vi": "2.5.1",
-          "Humanizer.Core.zh-CN": "2.5.1",
-          "Humanizer.Core.zh-Hans": "2.5.1",
-          "Humanizer.Core.zh-Hant": "2.5.1"
+          "Humanizer.Core.af": "2.5.16",
+          "Humanizer.Core.ar": "2.5.16",
+          "Humanizer.Core.bg": "2.5.16",
+          "Humanizer.Core.bn-BD": "2.5.16",
+          "Humanizer.Core.cs": "2.5.16",
+          "Humanizer.Core.da": "2.5.16",
+          "Humanizer.Core.de": "2.5.16",
+          "Humanizer.Core.el": "2.5.16",
+          "Humanizer.Core.es": "2.5.16",
+          "Humanizer.Core.fa": "2.5.16",
+          "Humanizer.Core.fi-FI": "2.5.16",
+          "Humanizer.Core.fr": "2.5.16",
+          "Humanizer.Core.fr-BE": "2.5.16",
+          "Humanizer.Core.he": "2.5.16",
+          "Humanizer.Core.hr": "2.5.16",
+          "Humanizer.Core.hu": "2.5.16",
+          "Humanizer.Core.id": "2.5.16",
+          "Humanizer.Core.it": "2.5.16",
+          "Humanizer.Core.ja": "2.5.16",
+          "Humanizer.Core.lv": "2.5.16",
+          "Humanizer.Core.ms-MY": "2.5.16",
+          "Humanizer.Core.mt": "2.5.16",
+          "Humanizer.Core.nb": "2.5.16",
+          "Humanizer.Core.nb-NO": "2.5.16",
+          "Humanizer.Core.nl": "2.5.16",
+          "Humanizer.Core.pl": "2.5.16",
+          "Humanizer.Core.pt": "2.5.16",
+          "Humanizer.Core.ro": "2.5.16",
+          "Humanizer.Core.ru": "2.5.16",
+          "Humanizer.Core.sk": "2.5.16",
+          "Humanizer.Core.sl": "2.5.16",
+          "Humanizer.Core.sr": "2.5.16",
+          "Humanizer.Core.sr-Latn": "2.5.16",
+          "Humanizer.Core.sv": "2.5.16",
+          "Humanizer.Core.tr": "2.5.16",
+          "Humanizer.Core.uk": "2.5.16",
+          "Humanizer.Core.uz-Cyrl-UZ": "2.5.16",
+          "Humanizer.Core.uz-Latn-UZ": "2.5.16",
+          "Humanizer.Core.vi": "2.5.16",
+          "Humanizer.Core.zh-CN": "2.5.16",
+          "Humanizer.Core.zh-Hans": "2.5.16",
+          "Humanizer.Core.zh-Hant": "2.5.16"
         }
       },
-      "Humanizer.Core/2.5.1": {
+      "Humanizer.Core/2.5.16": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.1.58446"
+            "fileVersion": "2.5.16.1900"
           }
         },
         "compile": {
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
-      "Humanizer.Core.af/2.5.1": {
+      "Humanizer.Core.af/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/af/Humanizer.resources.dll": {
@@ -188,9 +206,9 @@
           }
         }
       },
-      "Humanizer.Core.ar/2.5.1": {
+      "Humanizer.Core.ar/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/ar/Humanizer.resources.dll": {
@@ -198,9 +216,9 @@
           }
         }
       },
-      "Humanizer.Core.bg/2.5.1": {
+      "Humanizer.Core.bg/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/bg/Humanizer.resources.dll": {
@@ -208,9 +226,9 @@
           }
         }
       },
-      "Humanizer.Core.bn-BD/2.5.1": {
+      "Humanizer.Core.bn-BD/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/bn-BD/Humanizer.resources.dll": {
@@ -218,9 +236,9 @@
           }
         }
       },
-      "Humanizer.Core.cs/2.5.1": {
+      "Humanizer.Core.cs/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/cs/Humanizer.resources.dll": {
@@ -228,9 +246,9 @@
           }
         }
       },
-      "Humanizer.Core.da/2.5.1": {
+      "Humanizer.Core.da/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/da/Humanizer.resources.dll": {
@@ -238,9 +256,9 @@
           }
         }
       },
-      "Humanizer.Core.de/2.5.1": {
+      "Humanizer.Core.de/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/de/Humanizer.resources.dll": {
@@ -248,9 +266,9 @@
           }
         }
       },
-      "Humanizer.Core.el/2.5.1": {
+      "Humanizer.Core.el/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/el/Humanizer.resources.dll": {
@@ -258,9 +276,9 @@
           }
         }
       },
-      "Humanizer.Core.es/2.5.1": {
+      "Humanizer.Core.es/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/es/Humanizer.resources.dll": {
@@ -268,9 +286,9 @@
           }
         }
       },
-      "Humanizer.Core.fa/2.5.1": {
+      "Humanizer.Core.fa/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/fa/Humanizer.resources.dll": {
@@ -278,9 +296,9 @@
           }
         }
       },
-      "Humanizer.Core.fi-FI/2.5.1": {
+      "Humanizer.Core.fi-FI/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/fi-FI/Humanizer.resources.dll": {
@@ -288,9 +306,9 @@
           }
         }
       },
-      "Humanizer.Core.fr/2.5.1": {
+      "Humanizer.Core.fr/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/fr/Humanizer.resources.dll": {
@@ -298,9 +316,9 @@
           }
         }
       },
-      "Humanizer.Core.fr-BE/2.5.1": {
+      "Humanizer.Core.fr-BE/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/fr-BE/Humanizer.resources.dll": {
@@ -308,9 +326,9 @@
           }
         }
       },
-      "Humanizer.Core.he/2.5.1": {
+      "Humanizer.Core.he/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/he/Humanizer.resources.dll": {
@@ -318,9 +336,9 @@
           }
         }
       },
-      "Humanizer.Core.hr/2.5.1": {
+      "Humanizer.Core.hr/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/hr/Humanizer.resources.dll": {
@@ -328,9 +346,9 @@
           }
         }
       },
-      "Humanizer.Core.hu/2.5.1": {
+      "Humanizer.Core.hu/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/hu/Humanizer.resources.dll": {
@@ -338,9 +356,9 @@
           }
         }
       },
-      "Humanizer.Core.id/2.5.1": {
+      "Humanizer.Core.id/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/id/Humanizer.resources.dll": {
@@ -348,9 +366,9 @@
           }
         }
       },
-      "Humanizer.Core.it/2.5.1": {
+      "Humanizer.Core.it/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/it/Humanizer.resources.dll": {
@@ -358,9 +376,9 @@
           }
         }
       },
-      "Humanizer.Core.ja/2.5.1": {
+      "Humanizer.Core.ja/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/ja/Humanizer.resources.dll": {
@@ -368,9 +386,9 @@
           }
         }
       },
-      "Humanizer.Core.lv/2.5.1": {
+      "Humanizer.Core.lv/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/lv/Humanizer.resources.dll": {
@@ -378,9 +396,29 @@
           }
         }
       },
-      "Humanizer.Core.nb/2.5.1": {
+      "Humanizer.Core.ms-MY/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
+        },
+        "resources": {
+          "lib/netstandard2.0/ms-MY/Humanizer.resources.dll": {
+            "locale": "ms-MY"
+          }
+        }
+      },
+      "Humanizer.Core.mt/2.5.16": {
+        "dependencies": {
+          "Humanizer.Core": "2.5.16"
+        },
+        "resources": {
+          "lib/netstandard2.0/mt/Humanizer.resources.dll": {
+            "locale": "mt"
+          }
+        }
+      },
+      "Humanizer.Core.nb/2.5.16": {
+        "dependencies": {
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/nb/Humanizer.resources.dll": {
@@ -388,9 +426,9 @@
           }
         }
       },
-      "Humanizer.Core.nb-NO/2.5.1": {
+      "Humanizer.Core.nb-NO/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/nb-NO/Humanizer.resources.dll": {
@@ -398,9 +436,9 @@
           }
         }
       },
-      "Humanizer.Core.nl/2.5.1": {
+      "Humanizer.Core.nl/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/nl/Humanizer.resources.dll": {
@@ -408,9 +446,9 @@
           }
         }
       },
-      "Humanizer.Core.pl/2.5.1": {
+      "Humanizer.Core.pl/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/pl/Humanizer.resources.dll": {
@@ -418,9 +456,9 @@
           }
         }
       },
-      "Humanizer.Core.pt/2.5.1": {
+      "Humanizer.Core.pt/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/pt/Humanizer.resources.dll": {
@@ -428,9 +466,9 @@
           }
         }
       },
-      "Humanizer.Core.ro/2.5.1": {
+      "Humanizer.Core.ro/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/ro/Humanizer.resources.dll": {
@@ -438,9 +476,9 @@
           }
         }
       },
-      "Humanizer.Core.ru/2.5.1": {
+      "Humanizer.Core.ru/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/ru/Humanizer.resources.dll": {
@@ -448,9 +486,9 @@
           }
         }
       },
-      "Humanizer.Core.sk/2.5.1": {
+      "Humanizer.Core.sk/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/sk/Humanizer.resources.dll": {
@@ -458,9 +496,9 @@
           }
         }
       },
-      "Humanizer.Core.sl/2.5.1": {
+      "Humanizer.Core.sl/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/sl/Humanizer.resources.dll": {
@@ -468,9 +506,9 @@
           }
         }
       },
-      "Humanizer.Core.sr/2.5.1": {
+      "Humanizer.Core.sr/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/sr/Humanizer.resources.dll": {
@@ -478,9 +516,9 @@
           }
         }
       },
-      "Humanizer.Core.sr-Latn/2.5.1": {
+      "Humanizer.Core.sr-Latn/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/sr-Latn/Humanizer.resources.dll": {
@@ -488,9 +526,9 @@
           }
         }
       },
-      "Humanizer.Core.sv/2.5.1": {
+      "Humanizer.Core.sv/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/sv/Humanizer.resources.dll": {
@@ -498,9 +536,9 @@
           }
         }
       },
-      "Humanizer.Core.tr/2.5.1": {
+      "Humanizer.Core.tr/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/tr/Humanizer.resources.dll": {
@@ -508,9 +546,9 @@
           }
         }
       },
-      "Humanizer.Core.uk/2.5.1": {
+      "Humanizer.Core.uk/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/uk/Humanizer.resources.dll": {
@@ -518,9 +556,9 @@
           }
         }
       },
-      "Humanizer.Core.uz-Cyrl-UZ/2.5.1": {
+      "Humanizer.Core.uz-Cyrl-UZ/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/uz-Cyrl-UZ/Humanizer.resources.dll": {
@@ -528,9 +566,9 @@
           }
         }
       },
-      "Humanizer.Core.uz-Latn-UZ/2.5.1": {
+      "Humanizer.Core.uz-Latn-UZ/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/uz-Latn-UZ/Humanizer.resources.dll": {
@@ -538,9 +576,9 @@
           }
         }
       },
-      "Humanizer.Core.vi/2.5.1": {
+      "Humanizer.Core.vi/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/vi/Humanizer.resources.dll": {
@@ -548,9 +586,9 @@
           }
         }
       },
-      "Humanizer.Core.zh-CN/2.5.1": {
+      "Humanizer.Core.zh-CN/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/zh-CN/Humanizer.resources.dll": {
@@ -558,9 +596,9 @@
           }
         }
       },
-      "Humanizer.Core.zh-Hans/2.5.1": {
+      "Humanizer.Core.zh-Hans/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/zh-Hans/Humanizer.resources.dll": {
@@ -568,9 +606,9 @@
           }
         }
       },
-      "Humanizer.Core.zh-Hant/2.5.1": {
+      "Humanizer.Core.zh-Hant/2.5.16": {
         "dependencies": {
-          "Humanizer.Core": "2.5.1"
+          "Humanizer.Core": "2.5.16"
         },
         "resources": {
           "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll": {
@@ -578,11 +616,11 @@
           }
         }
       },
-      "Markdig/0.15.2": {
+      "Markdig/0.15.5": {
         "runtime": {
           "lib/netstandard2.0/Markdig.dll": {
-            "assemblyVersion": "0.15.2.0",
-            "fileVersion": "0.15.2.0"
+            "assemblyVersion": "0.15.5.0",
+            "fileVersion": "0.15.5.0"
           }
         },
         "compile": {
@@ -892,6 +930,100 @@
           "lib/netstandard2.0/NWebsec.AspNetCore.Mvc.TagHelpers.dll": {}
         }
       },
+      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/debian.8-x64/native/_._": {
+            "rid": "debian.8-x64",
+            "assetType": "native"
+          }
+        }
+      },
+      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/fedora.23-x64/native/_._": {
+            "rid": "fedora.23-x64",
+            "assetType": "native"
+          }
+        }
+      },
+      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/fedora.24-x64/native/_._": {
+            "rid": "fedora.24-x64",
+            "assetType": "native"
+          }
+        }
+      },
+      "runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "dependencies": {
+          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
+          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
+          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
+          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
+          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
+          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
+          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
+          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
+          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
+          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+        }
+      },
+      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/opensuse.13.2-x64/native/_._": {
+            "rid": "opensuse.13.2-x64",
+            "assetType": "native"
+          }
+        }
+      },
+      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/opensuse.42.1-x64/native/_._": {
+            "rid": "opensuse.42.1-x64",
+            "assetType": "native"
+          }
+        }
+      },
+      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/osx.10.10-x64/native/_._": {
+            "rid": "osx.10.10-x64",
+            "assetType": "native"
+          }
+        }
+      },
+      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/rhel.7-x64/native/_._": {
+            "rid": "rhel.7-x64",
+            "assetType": "native"
+          }
+        }
+      },
+      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/ubuntu.14.04-x64/native/_._": {
+            "rid": "ubuntu.14.04-x64",
+            "assetType": "native"
+          }
+        }
+      },
+      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/ubuntu.16.04-x64/native/_._": {
+            "rid": "ubuntu.16.04-x64",
+            "assetType": "native"
+          }
+        }
+      },
+      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+        "runtimeTargets": {
+          "runtime/ubuntu.16.10-x64/native/_._": {
+            "rid": "ubuntu.16.10-x64",
+            "assetType": "native"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.11": {
         "dependencies": {
           "SQLitePCLRaw.core": "1.1.11",
@@ -1011,6 +1143,54 @@
           "lib/netstandard1.1/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
+      "System.Net.Http/4.3.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.DiagnosticSource": "4.5.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Globalization.Extensions": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.Net.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Security.Cryptography.Algorithms": "4.3.0",
+          "System.Security.Cryptography.Encoding": "4.3.0",
+          "System.Security.Cryptography.OpenSsl": "4.3.0",
+          "System.Security.Cryptography.Primitives": "4.3.0",
+          "System.Security.Cryptography.X509Certificates": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "runtime.native.System": "4.3.0",
+          "runtime.native.System.Net.Http": "4.3.0",
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+        },
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Net.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.0",
+          "Microsoft.NETCore.Targets": "2.0.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Handles": "4.3.0"
+        }
+      },
       "System.Net.Requests/4.0.11": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
@@ -1019,7 +1199,7 @@
           "System.Diagnostics.Tracing": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.IO": "4.3.0",
-          "System.Net.Http": "4.3.0",
+          "System.Net.Http": "4.3.3",
           "System.Net.Primitives": "4.3.0",
           "System.Net.WebHeaderCollection": "4.0.1",
           "System.Resources.ResourceManager": "4.3.0",
@@ -1046,15 +1226,15 @@
           "System.Runtime.Extensions": "4.3.0"
         }
       },
-      "Westwind.AspNetCore.Markdown/3.0.36": {
+      "Westwind.AspNetCore.Markdown/3.2.2": {
         "dependencies": {
-          "Markdig": "0.15.2",
+          "Markdig": "0.15.5",
           "Microsoft.AspNetCore.Mvc": "2.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/Westwind.AspNetCore.Markdown.dll": {
-            "assemblyVersion": "3.0.36.0",
-            "fileVersion": "3.0.36.0"
+            "assemblyVersion": "3.2.2.0",
+            "fileVersion": "3.2.2.0"
           }
         },
         "compile": {
@@ -1087,6 +1267,7 @@
       "Domain/1.0.0": {
         "dependencies": {
           "CommonShared": "1.0.0",
+          "Microsoft.Extensions.Identity.Stores": "2.2.0",
           "NodaTime": "2.4.4",
           "System.ComponentModel.Annotations": "4.5.0"
         },
@@ -1113,6 +1294,7 @@
       "Persistence/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.0",
           "NodaTime": "2.4.4"
         },
@@ -2997,7 +3179,7 @@
           "Microsoft.IdentityModel.Tokens": "5.3.0",
           "System.Collections.Specialized": "4.3.0",
           "System.Diagnostics.Contracts": "4.3.0",
-          "System.Net.Http": "4.3.0"
+          "System.Net.Http": "4.3.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {}
@@ -3125,15 +3307,6 @@
         },
         "compileOnly": true
       },
-      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "compileOnly": true
-      },
-      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "compileOnly": true
-      },
-      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "compileOnly": true
-      },
       "runtime.native.System/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
@@ -3169,43 +3342,7 @@
         },
         "compileOnly": true
       },
-      "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "dependencies": {
-          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
-          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
-          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
-          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
-          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
-          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
-          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
-          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
-          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
-          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
-        },
-        "compileOnly": true
-      },
-      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "compileOnly": true
-      },
-      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "compileOnly": true
-      },
       "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-        "compileOnly": true
-      },
-      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "compileOnly": true
-      },
-      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "compileOnly": true
-      },
-      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "compileOnly": true
-      },
-      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-        "compileOnly": true
-      },
-      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "compileOnly": true
       },
       "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
@@ -3523,46 +3660,6 @@
       "System.Memory/4.5.1": {
         "compileOnly": true
       },
-      "System.Net.Http/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.2.0",
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.5.0",
-          "System.Diagnostics.Tracing": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Globalization.Extensions": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.IO.FileSystem": "4.3.0",
-          "System.Net.Primitives": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Handles": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Encoding": "4.3.0",
-          "System.Security.Cryptography.OpenSsl": "4.3.0",
-          "System.Security.Cryptography.Primitives": "4.3.0",
-          "System.Security.Cryptography.X509Certificates": "4.3.0",
-          "System.Text.Encoding": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Threading.Tasks": "4.3.0",
-          "runtime.native.System": "4.3.0",
-          "runtime.native.System.Net.Http": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
-        },
-        "compileOnly": true
-      },
-      "System.Net.Primitives/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.2.0",
-          "Microsoft.NETCore.Targets": "2.0.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Handles": "4.3.0"
-        },
-        "compileOnly": true
-      },
       "System.Net.WebSockets.WebSocketProtocol/4.5.1": {
         "compile": {
           "ref/netstandard2.0/System.Net.WebSockets.WebSocketProtocol.dll": {}
@@ -3802,7 +3899,7 @@
           "System.Security.Cryptography.Primitives": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "runtime.native.System.Security.Cryptography.Apple": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
         },
         "compileOnly": true
       },
@@ -3843,7 +3940,7 @@
           "System.Runtime.InteropServices": "4.3.0",
           "System.Security.Cryptography.Primitives": "4.3.0",
           "System.Text.Encoding": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
         },
         "compileOnly": true
       },
@@ -3861,7 +3958,7 @@
           "System.Security.Cryptography.Encoding": "4.3.0",
           "System.Security.Cryptography.Primitives": "4.3.0",
           "System.Text.Encoding": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
         },
         "compileOnly": true
       },
@@ -3909,7 +4006,7 @@
           "System.Threading": "4.3.0",
           "runtime.native.System": "4.3.0",
           "runtime.native.System.Net.Http": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
         },
         "compileOnly": true
       },
@@ -4165,6 +4262,13 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/6.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.6.0.0.nupkg.sha512"
     },
+    "ButterCMS/1.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eWFfQIIzpXUgueABqm/lPtMO+jo9/TDMS9N0Wel+zWRZJbnKBs1eXAEJObdC7Gfmv81iTG9kuoXX38WAnlieMg==",
+      "path": "buttercms/1.3.4",
+      "hashPath": "buttercms.1.3.4.nupkg.sha512"
+    },
     "HtmlSanitizer/4.0.199": {
       "type": "package",
       "serviceable": true,
@@ -4172,306 +4276,320 @@
       "path": "htmlsanitizer/4.0.199",
       "hashPath": "htmlsanitizer.4.0.199.nupkg.sha512"
     },
-    "Humanizer/2.5.1": {
+    "Humanizer/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nQ8VUtL6dOYp9yhoDZYOGNFzVADOUSDSr007xrgyRgA6SfiVmzFfAqbDD6dtk5a35Ww/gLJwz31vMcmqXed3Mg==",
-      "path": "humanizer/2.5.1",
-      "hashPath": "humanizer.2.5.1.nupkg.sha512"
+      "sha512": "sha512-qAy9BUj5UZNiAx1LiZMvAO3CfiPkfz6b0WHFvQjhvCxwE3N1A/oH/WgwH7gWsXQd4+DSPmPZJ6VYrY/sinPSig==",
+      "path": "humanizer/2.5.16",
+      "hashPath": "humanizer.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core/2.5.1": {
+    "Humanizer.Core/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-yBY9+J9acCM/tC3mc+kooSTf6XGqtUSHt99slo2kdTa9+7u50m7Dwt+8kpbg9JuXBVGSGJUI3dQraA1iG4zI3w==",
-      "path": "humanizer.core/2.5.1",
-      "hashPath": "humanizer.core.2.5.1.nupkg.sha512"
+      "sha512": "sha512-XXaAGjnaq4TEMP+eZYMglyhkQBhMqddruf7+kDET6r1Y9TsHeMI93hjtWHHSF6AzyYQJSdX33nFFvERRIxLCWg==",
+      "path": "humanizer.core/2.5.16",
+      "hashPath": "humanizer.core.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.af/2.5.1": {
+    "Humanizer.Core.af/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LdVK6nRNvSuZQEe27PBl29hS8NEXwIeltxD2KfOaZZdardZZwU2MjcA1bqh1MBkct3dDyYQT+NwXIa5gcAZ9sw==",
-      "path": "humanizer.core.af/2.5.1",
-      "hashPath": "humanizer.core.af.2.5.1.nupkg.sha512"
+      "sha512": "sha512-cPVj9aaeX06yM0W0ku8zcM+ovVsUfeu+EY013Pyjd2Iv5OfF/CRGPZybm14Uy6fSvjgn8q79r1lwVHbJyWumOQ==",
+      "path": "humanizer.core.af/2.5.16",
+      "hashPath": "humanizer.core.af.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.ar/2.5.1": {
+    "Humanizer.Core.ar/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LlB9KOoNrfbSLLw6wv79eFaV75BBR3yeFBckUXvA38RjES1Y/44oANyfh+uKwCLsAVYkBIk35jv4tbzhmg9Ecw==",
-      "path": "humanizer.core.ar/2.5.1",
-      "hashPath": "humanizer.core.ar.2.5.1.nupkg.sha512"
+      "sha512": "sha512-eImdtlruaek0XOC9t1eAaBJzzFT4zdt84kKSxoqJ8IlV/8QJQh6ym1aFpgqZXuyIlaXvjsmzu8IiLT3y4au3GQ==",
+      "path": "humanizer.core.ar/2.5.16",
+      "hashPath": "humanizer.core.ar.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.bg/2.5.1": {
+    "Humanizer.Core.bg/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eQ2v9yYPD7iwgTTUWtNhyv3l/ntpN940zCp8zmqf8lA9/YxZxMyXYHdERanGfCsdRMzpnJ5D/65J3OksaVibqA==",
-      "path": "humanizer.core.bg/2.5.1",
-      "hashPath": "humanizer.core.bg.2.5.1.nupkg.sha512"
+      "sha512": "sha512-/JhOKk/2eIskB5naGvPILiMacKzUFIl8xsQU9Z3BSHoBHm+LssftAXGNP5tp2eDTAUrbmgb3mw36L6s8s+rdPw==",
+      "path": "humanizer.core.bg/2.5.16",
+      "hashPath": "humanizer.core.bg.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.bn-BD/2.5.1": {
+    "Humanizer.Core.bn-BD/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Wbzr0IPCYb+xBQPc1KaNRPzL5H+CUHwebK3MEC9VBdPT7hhMzUAa/p9myRFQkSoaXJGtTxYLWmlcX/WbTVTHGA==",
-      "path": "humanizer.core.bn-bd/2.5.1",
-      "hashPath": "humanizer.core.bn-bd.2.5.1.nupkg.sha512"
+      "sha512": "sha512-hw5NI7IvRER1D2pfBpVIXhzMIfS3Xzl5OqAmhtzrXNXVXnfEMabaSMoE80Uab7788dByhf4fdSZbFCyyZnbHmw==",
+      "path": "humanizer.core.bn-bd/2.5.16",
+      "hashPath": "humanizer.core.bn-bd.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.cs/2.5.1": {
+    "Humanizer.Core.cs/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-c7ewvwLVdVMgd8m9UCXDbIsBSM1vPb728+Un0egZWsdekTiuojIxBYwXxU2/UoLrC1ydFKHXAR8NYfM4H7u+uA==",
-      "path": "humanizer.core.cs/2.5.1",
-      "hashPath": "humanizer.core.cs.2.5.1.nupkg.sha512"
+      "sha512": "sha512-GcJANMyaWPtAG7bGlevm02ZsuYl3VrGGDO8+jkQ2YZiXKXjy87dbxU1sP5jZe/tW9siXNi4urA7591U1wUq6pA==",
+      "path": "humanizer.core.cs/2.5.16",
+      "hashPath": "humanizer.core.cs.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.da/2.5.1": {
+    "Humanizer.Core.da/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pqRRF3Ryz6KH/M0tG+82yqwMQyPwPUM5w5mqqbRoUzL1qn/rHkOhXn8VW3ak4ZWChDxlwr7TjjGG15AF32qCHQ==",
-      "path": "humanizer.core.da/2.5.1",
-      "hashPath": "humanizer.core.da.2.5.1.nupkg.sha512"
+      "sha512": "sha512-DEnPaljz4j48eBeJxbhIm80xJHhl4L7KOArtObVHoZfj++VZEgDT4dTn462iEmWWRWl/WxbuI9OQx3KePvA/Kg==",
+      "path": "humanizer.core.da/2.5.16",
+      "hashPath": "humanizer.core.da.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.de/2.5.1": {
+    "Humanizer.Core.de/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uThhOUkubNIc1hFvURgBeODRKg5WeFaLdmUkIvFhyHIWzRoWZVm/WNHk1+MiWxwkmVfFIvMw1EQnUWDbPVsHGw==",
-      "path": "humanizer.core.de/2.5.1",
-      "hashPath": "humanizer.core.de.2.5.1.nupkg.sha512"
+      "sha512": "sha512-Oz9KtoQXZDEKQ209sDb6fTQtOdYm2Sj01xXyCfVqo8KrTeBcqM1hqZD2zG9WVH4Hi9OnKjPm9QC6i+/TGaHg/w==",
+      "path": "humanizer.core.de/2.5.16",
+      "hashPath": "humanizer.core.de.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.el/2.5.1": {
+    "Humanizer.Core.el/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gRMMyIV6v5YuT3maXe3amb2+XTERQ9Ut1KjeRWHBXLeVCikkR3LblP7BrxX4ZhCEayNAVPpkBuyH2Stap4dTrA==",
-      "path": "humanizer.core.el/2.5.1",
-      "hashPath": "humanizer.core.el.2.5.1.nupkg.sha512"
+      "sha512": "sha512-WiKbBMIIwmBcJRpLFDBpeZp/CSOMEEVy283y9awmIR6hNVk6sFrSP1qy0JgunPVW4Dplz6gaN03mUcmHW51huA==",
+      "path": "humanizer.core.el/2.5.16",
+      "hashPath": "humanizer.core.el.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.es/2.5.1": {
+    "Humanizer.Core.es/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mO0VgGCAHpmXPPiSMLvrX09i6dMtudSAAvZt5ObDSLPraMhZvXNqYhKcRGAdpQ/OYIlHdtCpB8ImlvxxqzM/0Q==",
-      "path": "humanizer.core.es/2.5.1",
-      "hashPath": "humanizer.core.es.2.5.1.nupkg.sha512"
+      "sha512": "sha512-sK3oLYJHG8EYqXHCK+pc4N2qQ08ZuhFjDmV4sawRiWHd5CtO1/3wozZCGjdrPdK0Bv6lPghsA2hZOBzlFvlJ5w==",
+      "path": "humanizer.core.es/2.5.16",
+      "hashPath": "humanizer.core.es.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.fa/2.5.1": {
+    "Humanizer.Core.fa/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Pw8zL15oF0p/WRv16StyRxUFQ5r/ZFBVTBUdQ+vBAPdcUmLAaZ6In+fVU9RuklR1CqCK7fPgXyo2Ov6ZInKVBQ==",
-      "path": "humanizer.core.fa/2.5.1",
-      "hashPath": "humanizer.core.fa.2.5.1.nupkg.sha512"
+      "sha512": "sha512-1NMebB/SI8I6o4eW1UEhHYIXonUBL866Ju4+WR/JiVO07D2fhWhM0ylW2/25loIGzQs8Nr9ffisGstEpDkzAig==",
+      "path": "humanizer.core.fa/2.5.16",
+      "hashPath": "humanizer.core.fa.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.fi-FI/2.5.1": {
+    "Humanizer.Core.fi-FI/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bhzh5k9rAdjI6Jk6PbGahWwyzDdvFgKLmQr97Io3m3QJ+GEYJZTiKmVBlxE28hTbIl9ws6eUAprhvlBo66Sglg==",
-      "path": "humanizer.core.fi-fi/2.5.1",
-      "hashPath": "humanizer.core.fi-fi.2.5.1.nupkg.sha512"
+      "sha512": "sha512-cLgBjT4TAs5p0q6gvyf73eOPgriKtfDlv3lVb3T9wfxS3A8E4WKxj4uWYx7pdwUPIPaRV79wlnx1f8VswORqOg==",
+      "path": "humanizer.core.fi-fi/2.5.16",
+      "hashPath": "humanizer.core.fi-fi.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.fr/2.5.1": {
+    "Humanizer.Core.fr/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8kDxKXaAylPl/TIWYibblpwi9rbTQQhtjHqWG78+jVai9cn/sJlhmGRl8cKI/7xWDj2L9Il7jDIatsPCWs6AMw==",
-      "path": "humanizer.core.fr/2.5.1",
-      "hashPath": "humanizer.core.fr.2.5.1.nupkg.sha512"
+      "sha512": "sha512-NdeFgFosdCuT3ht/r0B0S9CJAn96tqqeD+N+DKhKnTybKRuO29ieySo6evA4z2GS60RRZWjTW9zx7mAjn/ppMg==",
+      "path": "humanizer.core.fr/2.5.16",
+      "hashPath": "humanizer.core.fr.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.fr-BE/2.5.1": {
+    "Humanizer.Core.fr-BE/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Vp32a2KHgc/+Yy1unEtDNMU6nRVMqf1E7Q3Guw34qyPFHC2DeIWwXgYkhzohh7q4cOj3whFd2WVNe2ZNregNXg==",
-      "path": "humanizer.core.fr-be/2.5.1",
-      "hashPath": "humanizer.core.fr-be.2.5.1.nupkg.sha512"
+      "sha512": "sha512-A67s+bcfcx4PIZTE3LvnrJdJDbF6cTkdTlbfBov51S/fwbjhUrCS1TCH7KVC8KnwImmk0o3wj+fQg5mtxDU3WA==",
+      "path": "humanizer.core.fr-be/2.5.16",
+      "hashPath": "humanizer.core.fr-be.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.he/2.5.1": {
+    "Humanizer.Core.he/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Xos1vqPv4AGDPdJmnW5ORj0qfEX0g4WPRNqIUjvkvY6V+SVdZYmQEAvliCfk54T7TyuIwn5q1+egAj2SFu6SoQ==",
-      "path": "humanizer.core.he/2.5.1",
-      "hashPath": "humanizer.core.he.2.5.1.nupkg.sha512"
+      "sha512": "sha512-m/uqGTogpAXqe1N0bttP73DBWywndhv3Lh8g8oi7DwVi2zKr134ZzC5/vUz8DoKBUC8WTFCnh6ENilYTuELw7A==",
+      "path": "humanizer.core.he/2.5.16",
+      "hashPath": "humanizer.core.he.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.hr/2.5.1": {
+    "Humanizer.Core.hr/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-voE3we0NPEG1FcE+Zpi1/X51aORYTICbnz5G16xLmKTzH+M39c5ut6QSpc9phCWRH7NMWHZGQzpZJDiHTep/LA==",
-      "path": "humanizer.core.hr/2.5.1",
-      "hashPath": "humanizer.core.hr.2.5.1.nupkg.sha512"
+      "sha512": "sha512-JCyQbLCCR5e9zfE2YMnH0SiEJ8zrwJ9gf91jGJCIZwewogMEKMTUc9aJ9q/CKe2nvVi8zMsS+Ntda1fJQGHI3Q==",
+      "path": "humanizer.core.hr/2.5.16",
+      "hashPath": "humanizer.core.hr.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.hu/2.5.1": {
+    "Humanizer.Core.hu/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hRh/7DbPvUe+wEAHXjKSozoAcNvJMgMsxoZA2LMeDSS8+sH/GRlgWmwrU2by8mHGtUawXVJNYxmtbpEREZ6CCg==",
-      "path": "humanizer.core.hu/2.5.1",
-      "hashPath": "humanizer.core.hu.2.5.1.nupkg.sha512"
+      "sha512": "sha512-7oRL28et2Gw3NJynefJb4HLR9owaqYqNnZq37BcXR44O2HwN+xLGsIDu4UKK7vhWJrM+FPVrL/HuJn8twYhivw==",
+      "path": "humanizer.core.hu/2.5.16",
+      "hashPath": "humanizer.core.hu.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.id/2.5.1": {
+    "Humanizer.Core.id/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vApXsC08cERrYD6C5ZW+HWmfMvqiJlYDzMS/fS8E24xtLOHbHUmyfyeZSpgSVFhM8nHOxcGM9GM3qskZmiRT6g==",
-      "path": "humanizer.core.id/2.5.1",
-      "hashPath": "humanizer.core.id.2.5.1.nupkg.sha512"
+      "sha512": "sha512-Y4xqdCcxXW9uvtSVt/viIvBoEU72jTXMnmsv3BLOeXrDbUl24ycgxZrMQj7/KfmzCLWdR3C4siWCNLwCZQsoeg==",
+      "path": "humanizer.core.id/2.5.16",
+      "hashPath": "humanizer.core.id.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.it/2.5.1": {
+    "Humanizer.Core.it/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-f+izUcKfXnjEZdgNFcrBmTfqWiNJ911IAlbE6dlzuq30njzPFlaltSS5Pi5GjxgDBjGB+LW/LyjjAtBGJmRcfg==",
-      "path": "humanizer.core.it/2.5.1",
-      "hashPath": "humanizer.core.it.2.5.1.nupkg.sha512"
+      "sha512": "sha512-5E4u4tkxnLcY7ANjVcMlJcP/6WwQ7qaf8Sv6F9bSzE+xNJr2BiHCJVautt7qVjpf2ItianQ5uS2LkRSyqvmbTg==",
+      "path": "humanizer.core.it/2.5.16",
+      "hashPath": "humanizer.core.it.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.ja/2.5.1": {
+    "Humanizer.Core.ja/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JBK8xtdvsRDZodAce4K2qSxiN21JkI0y/buayxf/6t2RuQhnV2f1a8+NMoTjsHgDZtO3GDAzLKuPVDnxRDEZ9Q==",
-      "path": "humanizer.core.ja/2.5.1",
-      "hashPath": "humanizer.core.ja.2.5.1.nupkg.sha512"
+      "sha512": "sha512-1J9bbGwdnCUqpphNgZ/t0uks/xxNh1jhn0Ur45ZZoh/Dnu/Dw36jWF+50Wg10E9K7Wrq/JGhCzlV+2NMUlFdzA==",
+      "path": "humanizer.core.ja/2.5.16",
+      "hashPath": "humanizer.core.ja.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.lv/2.5.1": {
+    "Humanizer.Core.lv/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CH9IhPsTxQmL7gy0KTMMms2k08CHuNiT+7XNTLEjm3BbBwxEugpLB8PfYEhHYNsZeS1PXmxR1+nT7rl3K+NpSA==",
-      "path": "humanizer.core.lv/2.5.1",
-      "hashPath": "humanizer.core.lv.2.5.1.nupkg.sha512"
+      "sha512": "sha512-OSMEjDL2sMsT8I0dFTul+8nQui+ZuMizxdXXiKizmJPJ6ohGXj0zD4y8rLJiulWHF0jAqzUC1BO4I4mfUfQODw==",
+      "path": "humanizer.core.lv/2.5.16",
+      "hashPath": "humanizer.core.lv.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.nb/2.5.1": {
+    "Humanizer.Core.ms-MY/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/Oq0vwpDog8g0ZUSXBLRnfDWd3ZF8/rUtAGn+0bbjhQnAI+gHNhTUXW5Uxo84bC4Gey+O6Ejse3L6wwWYd6cyQ==",
-      "path": "humanizer.core.nb/2.5.1",
-      "hashPath": "humanizer.core.nb.2.5.1.nupkg.sha512"
+      "sha512": "sha512-NqR3856Xei7/xYK3zY9XKIZ4MKo5JDcQIJQ3FfWXICWm6IeihsZXvDxO4K/lmRWUeO2sp2ckS3Osar+SZhVHTQ==",
+      "path": "humanizer.core.ms-my/2.5.16",
+      "hashPath": "humanizer.core.ms-my.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.nb-NO/2.5.1": {
+    "Humanizer.Core.mt/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HoPC5tmQ7mLq5PNKogNauBml37fHwVlmNNdl8WU89Oi1UnYQFnaDOjoluonwtI6Zv6YQAaIujWaBXyXRb6KrgA==",
-      "path": "humanizer.core.nb-no/2.5.1",
-      "hashPath": "humanizer.core.nb-no.2.5.1.nupkg.sha512"
+      "sha512": "sha512-4AT3BML8j9G3d3x0rhGJuNF8CJsL9c0F+RZiXRRCzAzcZu1XZjaxJAdpZ/NYj6i/neWfu8ZmSv70lJ1//HkVig==",
+      "path": "humanizer.core.mt/2.5.16",
+      "hashPath": "humanizer.core.mt.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.nl/2.5.1": {
+    "Humanizer.Core.nb/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7oiG/qPeJRbNSwHgrVBODdTvIH06Hke5sSd673K0+hUY2U2B2J2JKQQpZ0G+dullTi/diPw4CLhtOe0xc9TT3A==",
-      "path": "humanizer.core.nl/2.5.1",
-      "hashPath": "humanizer.core.nl.2.5.1.nupkg.sha512"
+      "sha512": "sha512-iSD4NeXQj8M5+ZO/de5ornmecYpJKqSIFlXYbpi73uZEHRSu1oXQc4/ik4EmJcz2H90WQ8HHpAtnQBNoQVz9hA==",
+      "path": "humanizer.core.nb/2.5.16",
+      "hashPath": "humanizer.core.nb.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.pl/2.5.1": {
+    "Humanizer.Core.nb-NO/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2LVdJnWN5kRu0OaPzPUY/6V5AGNYbsphS4nJcq0XdW24uLPqVAIdz6j7kduZETuH12rGKT+XgaR+mkIYD5FE/A==",
-      "path": "humanizer.core.pl/2.5.1",
-      "hashPath": "humanizer.core.pl.2.5.1.nupkg.sha512"
+      "sha512": "sha512-ggHFRaCOEVZ1xxe9UIWSB/9VsTTkmAt22LBL0rw6TGuQuxywqQS3ghgT3sX2mDFdvJpEXoPhTQJuJORfGxebSQ==",
+      "path": "humanizer.core.nb-no/2.5.16",
+      "hashPath": "humanizer.core.nb-no.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.pt/2.5.1": {
+    "Humanizer.Core.nl/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Rts0ZfUfkV1IJpHntMSvR4mAuSpbX+Qy4/oEyX9rMOxviGBoGuqoofAhmoxk9pEnrq0LXD9rcTH+JO0yAZ8EBA==",
-      "path": "humanizer.core.pt/2.5.1",
-      "hashPath": "humanizer.core.pt.2.5.1.nupkg.sha512"
+      "sha512": "sha512-YJuNY0jMhrwE7xCFFvjJydYMqWXkHGW2qcKBqzs84H08y3VsjL0o3GnltYC3QJYdXgDCf+COPrIunuuBwi2Llg==",
+      "path": "humanizer.core.nl/2.5.16",
+      "hashPath": "humanizer.core.nl.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.ro/2.5.1": {
+    "Humanizer.Core.pl/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-g80KsIjIIRm+KQ9AKAlHrN6E1ui7tFBvNrkptzbl9BkhkLdwM29+ns5eSVw9eaqyveUniHsymswLUKGbak7kwg==",
-      "path": "humanizer.core.ro/2.5.1",
-      "hashPath": "humanizer.core.ro.2.5.1.nupkg.sha512"
+      "sha512": "sha512-ar4GV1wryVSLdjNwxlmh3UKja7e/c7c30bG0t7fnoR/ViYwiuMvJlR8FnoZOIcvRC29YPCJWi7ios11TzyB2Mg==",
+      "path": "humanizer.core.pl/2.5.16",
+      "hashPath": "humanizer.core.pl.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.ru/2.5.1": {
+    "Humanizer.Core.pt/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-m1eLukkko2NSmWlm6ZC1UFqAdOZnfS+YB/aXE8Lx6NORtYizqor5pznmL5DJFYTfEybELHCGKgqTTv/4Dshstg==",
-      "path": "humanizer.core.ru/2.5.1",
-      "hashPath": "humanizer.core.ru.2.5.1.nupkg.sha512"
+      "sha512": "sha512-KDwT+6LPl0jrCdb3xhTvkxPQHwQgg+Mg0xNj3M2qz5cruFFTBNXsPLQz1YUjumzS/i/b+/gcXIWgAghizJl6PQ==",
+      "path": "humanizer.core.pt/2.5.16",
+      "hashPath": "humanizer.core.pt.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.sk/2.5.1": {
+    "Humanizer.Core.ro/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-80ACZm58CJCBedVEm+ejxRnHOr7G4R908LKA5l8D5BmeDxx0rAlIx9VZzwHY2dLMtRRLa9iIO3tQN67J4M6TNA==",
-      "path": "humanizer.core.sk/2.5.1",
-      "hashPath": "humanizer.core.sk.2.5.1.nupkg.sha512"
+      "sha512": "sha512-Wu6vp9wFOgNBsv14ozLKQEo9n106DaMHPgTBd1a7Oy/ZYBlpffhNjI/KnEwiSxNRWovCELmOnNROzAs1ov2VAQ==",
+      "path": "humanizer.core.ro/2.5.16",
+      "hashPath": "humanizer.core.ro.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.sl/2.5.1": {
+    "Humanizer.Core.ru/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rKeMbeNVwpblH8CToWBRctp3EYAE5zmjuxUh10hSIhuMCFt5jRXcx/n1K50NnytESzQzBVVOZ5PnP6k88CaWuQ==",
-      "path": "humanizer.core.sl/2.5.1",
-      "hashPath": "humanizer.core.sl.2.5.1.nupkg.sha512"
+      "sha512": "sha512-1K5A/XeYD+0vwUJ6ARUMGcPrGYUJScmHCcansTYcDnXuL5jhAYnX1GavRNTxuH5Yh1N4HoWByssnt1NwBGeZKw==",
+      "path": "humanizer.core.ru/2.5.16",
+      "hashPath": "humanizer.core.ru.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.sr/2.5.1": {
+    "Humanizer.Core.sk/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ikravk+qrC1suJMfspXqIuMv0qySDq66LotA4iJSX1A+pAGKCpd+bs1CzEONcHm8VF0cjJ0R65rRuwhQLlS9DQ==",
-      "path": "humanizer.core.sr/2.5.1",
-      "hashPath": "humanizer.core.sr.2.5.1.nupkg.sha512"
+      "sha512": "sha512-Q0bfPUjp38DUsx072mlJiK1DWnigpEILMMzwkYuXmoQ1Sa9wV39jvUaFe8+iZM++WHSH3aeYH3Svw3OcIIUcwg==",
+      "path": "humanizer.core.sk/2.5.16",
+      "hashPath": "humanizer.core.sk.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.sr-Latn/2.5.1": {
+    "Humanizer.Core.sl/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IZZATP5xFZvL4+ZAp/PxYZRT5zQGTCCU1SxnPA/9VTtBjwpcqhXdUxDU8jy+3JdPYByJ+OKmuIdQjfcp3frYMQ==",
-      "path": "humanizer.core.sr-latn/2.5.1",
-      "hashPath": "humanizer.core.sr-latn.2.5.1.nupkg.sha512"
+      "sha512": "sha512-yvWyqJ6A64D2ke85+qhbBOhY2mFnv/qn/dTKlsMrU2SWjCDq+TnaQNgezRbqsBfdlrtbEDGoyIu+eJL+fagd6g==",
+      "path": "humanizer.core.sl/2.5.16",
+      "hashPath": "humanizer.core.sl.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.sv/2.5.1": {
+    "Humanizer.Core.sr/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UM06k8RSL7pNBpT1+MbJ5fK/walTdL+KJsMJJSuldLqofJN4hkbZTG6iw3HCwMVPyMmn/qHmjU81q1+1uxZ3eg==",
-      "path": "humanizer.core.sv/2.5.1",
-      "hashPath": "humanizer.core.sv.2.5.1.nupkg.sha512"
+      "sha512": "sha512-nLH0sispWBrCiCrDBHJYkMVdKD64nvycvC4q0WmxCWFIQRAOk61eRWqIAEvmXge0AYhF8SztKv4LMLULTWsMXQ==",
+      "path": "humanizer.core.sr/2.5.16",
+      "hashPath": "humanizer.core.sr.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.tr/2.5.1": {
+    "Humanizer.Core.sr-Latn/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GOvpB0BAj0OL4MO5Cd1a7Ikj1KTycGdJ9nW2UtgVm17b+CbTA+WIPG3OI9m1bKQhPnvmbk494BjBGPFt8TFN3A==",
-      "path": "humanizer.core.tr/2.5.1",
-      "hashPath": "humanizer.core.tr.2.5.1.nupkg.sha512"
+      "sha512": "sha512-vPzhdjoGBg/gR90fe0eZhcEQLXPDiRY5PuIRhgweSX9c3Tqj2byFzHLzgU5h5ym6AfULSQgLOyYAvGO58EMFag==",
+      "path": "humanizer.core.sr-latn/2.5.16",
+      "hashPath": "humanizer.core.sr-latn.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.uk/2.5.1": {
+    "Humanizer.Core.sv/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-a3fMGS8a8YmQcQsfVZsvDMUHqYDcau4tqdFJHnU18uUsGDZFba/yqzrNay+rRl5X8tp7waik6cpdfnz+1NwAHg==",
-      "path": "humanizer.core.uk/2.5.1",
-      "hashPath": "humanizer.core.uk.2.5.1.nupkg.sha512"
+      "sha512": "sha512-00WqI2fdWaNUtSeH6oRAsLrOy201XlryYClDuKBMBUA9ykFQ7ieRyv4FKSz1lJQxO11ZIlf2z4Nem4DJCJcYWw==",
+      "path": "humanizer.core.sv/2.5.16",
+      "hashPath": "humanizer.core.sv.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.uz-Cyrl-UZ/2.5.1": {
+    "Humanizer.Core.tr/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-50RtbBhmk2z80X4n+uqnKMaR7LNiS6zlM5sKgkwkiVel9TdFtuqFWaDt86o8lHVkSb4zDDZoqyxrgYfuPEQEYA==",
-      "path": "humanizer.core.uz-cyrl-uz/2.5.1",
-      "hashPath": "humanizer.core.uz-cyrl-uz.2.5.1.nupkg.sha512"
+      "sha512": "sha512-07NdtmuhZfTeSkhb6Gc0FxplIp1Cw6gFt6DkG4vMThWEyD9ZOyAm1ldb2qBmTLHy8Gk88YNbI341quE/9xKx5A==",
+      "path": "humanizer.core.tr/2.5.16",
+      "hashPath": "humanizer.core.tr.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.uz-Latn-UZ/2.5.1": {
+    "Humanizer.Core.uk/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0WFajYxd3Pbd/VoT5WNmJ8X48z+KY7sLcJtnCvf0lyi6FNnSprTmFZKZ826IhpLhSMt0Ddv+9vqf4ELKL/4ZsA==",
-      "path": "humanizer.core.uz-latn-uz/2.5.1",
-      "hashPath": "humanizer.core.uz-latn-uz.2.5.1.nupkg.sha512"
+      "sha512": "sha512-DOnSyg26X86rqIUk/iCmxKeurdEGpq4z9bN5FsAmCwM6LfHXs94rqfNpwDvDXx3aXbisV97s4GC6i/rzMZelDg==",
+      "path": "humanizer.core.uk/2.5.16",
+      "hashPath": "humanizer.core.uk.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.vi/2.5.1": {
+    "Humanizer.Core.uz-Cyrl-UZ/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KkSLIm8tpw3c+n6KPA68UskmXENZtQTKk66TIEag3VPMuKa7CDbwnQFojcLHAh0/ToI/evzB2YZaWST6LhXaLw==",
-      "path": "humanizer.core.vi/2.5.1",
-      "hashPath": "humanizer.core.vi.2.5.1.nupkg.sha512"
+      "sha512": "sha512-+skpYJei+vy1KmI4LGkoED9Jggmksyh35jn74Jlzmoil919CncSRALykVTMYwXUR7rmudw1hgEtlDcUX01HnPA==",
+      "path": "humanizer.core.uz-cyrl-uz/2.5.16",
+      "hashPath": "humanizer.core.uz-cyrl-uz.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.zh-CN/2.5.1": {
+    "Humanizer.Core.uz-Latn-UZ/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3OrPcXFWHwWMiWJiLSZiMCvSy9KmlwsSIrnS6O8U9USUIsr8V+MH3/Y47b7HL7UXwTg/PEs+nBh3em11DtdaZw==",
-      "path": "humanizer.core.zh-cn/2.5.1",
-      "hashPath": "humanizer.core.zh-cn.2.5.1.nupkg.sha512"
+      "sha512": "sha512-rAt4StQ13ss1wiQsHp2pPiDBWCs3TbUnwNqcZFB6B3/Y0zRJewbzAsWCKObUlQStXY9NM4uh0uzQ0eUX40x29A==",
+      "path": "humanizer.core.uz-latn-uz/2.5.16",
+      "hashPath": "humanizer.core.uz-latn-uz.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.zh-Hans/2.5.1": {
+    "Humanizer.Core.vi/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4qJSDUrGNij3wy7xqVcgekWN+yjqqPV461eHud5nBIAtHCiPXbyPBuE89LI5dWMaMip6RPrMqFde+QERFRUcQg==",
-      "path": "humanizer.core.zh-hans/2.5.1",
-      "hashPath": "humanizer.core.zh-hans.2.5.1.nupkg.sha512"
+      "sha512": "sha512-7c9zr2pvBA07j+Aquk0QizDxm9cPKO19B2LL817/k6ahtsEsYAxKI4HW7yYVbxheCLzG+Hs9BA7pKM30joz0aQ==",
+      "path": "humanizer.core.vi/2.5.16",
+      "hashPath": "humanizer.core.vi.2.5.16.nupkg.sha512"
     },
-    "Humanizer.Core.zh-Hant/2.5.1": {
+    "Humanizer.Core.zh-CN/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UdJQw876knBvXwBoYUsLDlymP+0AVGM8L/PXa/MX+K27bVBwzL/QO55efLT2psmm1eJDf/eQcsEXUuyYxlcVjA==",
-      "path": "humanizer.core.zh-hant/2.5.1",
-      "hashPath": "humanizer.core.zh-hant.2.5.1.nupkg.sha512"
+      "sha512": "sha512-NFV9vuTxCyB4ytY1kLE6d+AyNDtU4SA6UBZhcXQnXdg63pro69bN/G7RRqv3eFGyPVqgx4iIgE+QzGcL+/OQhw==",
+      "path": "humanizer.core.zh-cn/2.5.16",
+      "hashPath": "humanizer.core.zh-cn.2.5.16.nupkg.sha512"
     },
-    "Markdig/0.15.2": {
+    "Humanizer.Core.zh-Hans/2.5.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/gTQ2UYoOGC1uOtYo4+P4dXP1sOgkttI/kEk9N98GdkxFjpKQqkeqbc8L8+sxiyNmPqiTtheaHNoHnoztbLNwg==",
-      "path": "markdig/0.15.2",
-      "hashPath": "markdig.0.15.2.nupkg.sha512"
+      "sha512": "sha512-TFdELB8pAyK3/cgt3LOZEEfqZe3vH30CmpbL/awb2ZCi58KrEQIPmrD9zwww4aTubtlLko8sKlJ+hhMJYQzyig==",
+      "path": "humanizer.core.zh-hans/2.5.16",
+      "hashPath": "humanizer.core.zh-hans.2.5.16.nupkg.sha512"
+    },
+    "Humanizer.Core.zh-Hant/2.5.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BoW9UWxFoyWql7BewTuO6wc1p5J85O4+YPGSc2NVNDrUFdCIK/OvmR0LQJAL6zcc7Klxb5sP95BaqHWZ07lfDQ==",
+      "path": "humanizer.core.zh-hant/2.5.16",
+      "hashPath": "humanizer.core.zh-hant.2.5.16.nupkg.sha512"
+    },
+    "Markdig/0.15.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9p9Bof0UenEOruzioN3QhUSPZObeB0Lt/h1kD8/L5Seds8vu2zRYE8MH7jQh8W5DrCaCL4oe1VGxGvKbI3zwIg==",
+      "path": "markdig/0.15.5",
+      "hashPath": "markdig.0.15.5.nupkg.sha512"
     },
     "MediatR/6.0.0": {
       "type": "package",
@@ -4592,6 +4710,83 @@
       "path": "nwebsec.aspnetcore.mvc.taghelpers/2.0.0",
       "hashPath": "nwebsec.aspnetcore.mvc.taghelpers.2.0.0.nupkg.sha512"
     },
+    "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7VSGO0URRKoMEAq0Sc9cRz8mb6zbyx/BZDEWhgPdzzpmFhkam3fJ1DAGWFXBI4nGlma+uPKpfuMQP5LXRnOH5g==",
+      "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0oAaTAm6e2oVH+/Zttt0cuhGaePQYKII1dY8iaqP7CvOpVKgLybKRFvQjXR2LtxXOXTVPNv14j0ot8uV+HrUmw==",
+      "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G24ibsCNi5Kbz0oXWynBoRgtGvsw5ZSVEWjv13/KiCAM8C6wz9zzcCniMeQFIkJ2tasjo2kXlvlBZhplL51kGg==",
+      "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QR1OwtwehHxSeQvZKXe+iSd+d3XZNkEcuWMFYa2i0aG1l+lR739HPicKMlTbJst3spmeekDVBUS7SeS26s4U/g==",
+      "path": "runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I+GNKGg2xCHueRd1m9PzeEW7WLbNNLznmTuEi8/vZX71HudUbx1UTwlGkiwMri7JLl8hGaIAWnA/GONhu+LOyQ==",
+      "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1Z3TAq1ytS1IBRtPXJvEUZdVsfWfeNEhBkbiOCGEl9wwAfsjP2lz3ZFDx5tq8p60/EqbS0HItG5piHuB71RjoA==",
+      "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mU/cVmmHtQiDXhnzUImxIcDL48GbTk+TsptXyJA+MIOG9LRjPoAQC/qBFB7X+UNyK86bmvGwC8t+M66wsYC8w==",
+      "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vjwG0GGcTW/PPg6KVud8F9GLWYuAV1rrw1BKAqY0oh4jcUqg15oYF1+qkGR2x2ZHM4DQnWKQ7cJgYbfncz/lYg==",
+      "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7KMFpTkHC/zoExs+PwP8jDCWcrK9H6L7soowT80CUx3e+nxP/AFnq0AQAW5W76z2WYbLAYCRyPfwYFG6zkvQRw==",
+      "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xrlmRCnKZJLHxyyLIqkZjNXqgxnKdZxfItrPkjI+6pkRo5lHX8YvSZlWrSI5AVwLMi4HbNWP7064hcAWeZKp5w==",
+      "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-leXiwfiIkW7Gmn7cgnNcdtNAU70SjmKW3jxGj1iKHOvdn0zRWsgv/l2OJUO5zdGdiv2VRFnAsxxhDgMzofPdWg==",
+      "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
     "SQLitePCLRaw.bundle_green/1.1.11": {
       "type": "package",
       "serviceable": true,
@@ -4634,6 +4829,20 @@
       "path": "sqlitepclraw.provider.e_sqlite3.netstandard11/1.1.11",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.netstandard11.1.1.11.nupkg.sha512"
     },
+    "System.Net.Http/4.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7rCqIbkC/P2+A00NoDH5gnvFhADmX7Dc4INvsOajbU1MVhktE9vZNrjPtF82N6Uo7obK+yzlrPUv/M+snnN/9w==",
+      "path": "system.net.http/4.3.3",
+      "hashPath": "system.net.http.4.3.3.nupkg.sha512"
+    },
+    "System.Net.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qOu+hDwFwoZPbzPvwut2qATe3ygjeQBDQj91xlsaqGFQUI5i4ZnZb8yyQuLGpDGivEPIt8EJkd1BVzVoP31FXA==",
+      "path": "system.net.primitives/4.3.0",
+      "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
+    },
     "System.Net.Requests/4.0.11": {
       "type": "package",
       "serviceable": true,
@@ -4648,12 +4857,12 @@
       "path": "system.net.webheadercollection/4.0.1",
       "hashPath": "system.net.webheadercollection.4.0.1.nupkg.sha512"
     },
-    "Westwind.AspNetCore.Markdown/3.0.36": {
+    "Westwind.AspNetCore.Markdown/3.2.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wZv/eCb23R9LcYCfW7Xb+DXHhgnrwvy/eOS/HCbhbqAm/fGFlvbhQj0w8kDnN1LYxoBDJLK6aMbIGhYzDaqvTg==",
-      "path": "westwind.aspnetcore.markdown/3.0.36",
-      "hashPath": "westwind.aspnetcore.markdown.3.0.36.nupkg.sha512"
+      "sha512": "sha512-hDpYsjyJaxRmCa1WL80OV07aX0lzsitiEHOvHxUXHk7bVlEcneDsbsB5c8hQSZkRcIKBXc2Vc2QLH4rRGJ5Xow==",
+      "path": "westwind.aspnetcore.markdown/3.2.2",
+      "hashPath": "westwind.aspnetcore.markdown.3.2.2.nupkg.sha512"
     },
     "Application/1.0.0": {
       "type": "project",
@@ -5856,27 +6065,6 @@
       "path": "remotion.linq/2.2.0",
       "hashPath": "remotion.linq.2.2.0.nupkg.sha512"
     },
-    "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
-      "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
-    "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+yH1a49wJMy8Zt4yx5RhJrxO/DBDByAiCzNwiETI+1S4mPdCu0OY4djdciC7Vssk0l22wQaDLrXxXkp+3+7bVA==",
-      "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
-    "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-c3YNH1GQJbfIPJeCnr4avseugSqPrxwIqzthYyZDN6EuOyNOzq+y2KSUfRcXauya1sF4foESTgwM5e1A8arAKw==",
-      "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
     "runtime.native.System/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -5912,68 +6100,12 @@
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
     },
-    "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-NS1U+700m4KFRHR5o4vo9DSlTmlCKu/u7dtE5sUHVIPB+xpXxYQvgBgA6wEIeCz6Yfn0Z52/72WYsToCEPJnrw==",
-      "path": "runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
-    "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-b3pthNgxxFcD+Pc0WSEoC0+md3MyhRS6aCEeenvNE3Fdw1HyJ18ZhRFVJJzIeR/O/jpxPboB805Ho0T3Ul7w8A==",
-      "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
-    "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-KeLz4HClKf+nFS7p/6Fi/CqyLXh81FpiGzcmuS8DGi9lUqSnZ6Es23/gv2O+1XVGfrbNmviF7CckBpavkBoIFQ==",
-      "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
-    },
-    "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
-      "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
-    "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nyFNiCk/r+VOiIqreLix8yN+q3Wga9+SE8BCgkf+2BwEKiNx6DyvFjCgkfV743/grxv8jHJ8gUK4XEQw7yzRYg==",
-      "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
-    "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
-      "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
-    "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-I8bKw2I8k58Wx7fMKQJn2R8lamboCAiHfHeV/pS65ScKWMMI0+wJkLYlEKvgW1D/XvSl/221clBoR2q9QNNM7A==",
-      "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
-    "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
-      "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
-      "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
       "type": "package",
@@ -6220,20 +6352,6 @@
       "path": "system.memory/4.5.1",
       "hashPath": "system.memory.4.5.1.nupkg.sha512"
     },
-    "System.Net.Http/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sYg+FtILtRQuYWSIAuNOELwVuVsxVyJGWQyOnlAzhV4xvhyFnON1bAzYYC+jjRW8JREM45R0R5Dgi8MTC5sEwA==",
-      "path": "system.net.http/4.3.0",
-      "hashPath": "system.net.http.4.3.0.nupkg.sha512"
-    },
-    "System.Net.Primitives/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qOu+hDwFwoZPbzPvwut2qATe3ygjeQBDQj91xlsaqGFQUI5i4ZnZb8yyQuLGpDGivEPIt8EJkd1BVzVoP31FXA==",
-      "path": "system.net.primitives/4.3.0",
-      "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
-    },
     "System.Net.WebSockets.WebSocketProtocol/4.5.1": {
       "type": "package",
       "serviceable": true,
@@ -6335,7 +6453,7 @@
     "System.Runtime.CompilerServices.Unsafe/4.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-x/3d5xb+mc9e4I2GOOT+HPRWMZLbYjNN/kYKsb0fyUKcWizn/t1CIrGRLIBhv7H0ptYEt+WTTztdPmwSUMyKig==",
+      "sha512": "sha512-qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
     },

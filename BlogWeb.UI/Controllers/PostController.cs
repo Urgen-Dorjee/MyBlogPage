@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 
 namespace BlogWeb.UI.Controllers
 {
+    
     public class PostController : BaseController
     {
         private readonly ILogger _logger;

@@ -14,8 +14,9 @@ namespace Domain.Entities
 
         [NotMapped]
         public Instant Published { get; set; }
-        public string Slug { get; set; }
-        public string AuthorName { get; set; }
+        public string Slug { get; set; }        
+
+        public Author Authors { get; set; }
 
         [Column("Published")]
         [DataType(DataType.DateTime)]
@@ -36,6 +37,7 @@ namespace Domain.Entities
                 Slug = UrlHelpers.URLFriendly(value);
                 _Topic = value;
             }
-        } 
+        }
+
     }
 }

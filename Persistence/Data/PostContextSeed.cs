@@ -42,8 +42,7 @@ namespace Persistence.Data
                     Id = 1,
                     Topic = "Ravangla Travel Dairy Year 2019",
                     Slug = "ravangla-travel-dairy-year-2019",
-                    Published = Instant.FromDateTimeUtc(new DateTime(2018, 6, 19, 14, 31, 2, 265, DateTimeKind.Utc)),
-                    AuthorName = "Urgen Dorjee",
+                    Published = Instant.FromDateTimeUtc(new DateTime(2018, 6, 19, 14, 31, 2, 265, DateTimeKind.Utc)),  
                     Content = "This is the default home page. Please change me!"
                 },
                 new Post()
@@ -52,7 +51,6 @@ namespace Persistence.Data
                     Topic = "His Holiness Dalai Lama Bodh Gaya Sermon 2019",
                     Slug = "his-holiness-dalai-lama-bodh-gaya-sermon-2019",
                     Published = Instant.FromDateTimeUtc(new DateTime(2018, 6, 19, 14, 31, 2, 265, DateTimeKind.Utc)),
-                    AuthorName = "Kalsang Nyima",
                     Content = "This is the default home page. Please change me!"
                 }
             };

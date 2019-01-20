@@ -5377,6 +5377,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CommonShared": "1.0.0",
+          "Microsoft.Extensions.Identity.Stores": "2.1.0",
           "NodaTime": "2.4.4",
           "System.ComponentModel.Annotations": "4.5.0"
         },
@@ -5407,6 +5408,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Domain": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.0",
           "NodaTime": "2.4.4"
         },
@@ -10772,6 +10774,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CommonShared": "1.0.0",
+          "Microsoft.Extensions.Identity.Stores": "2.1.0",
           "NodaTime": "2.4.4",
           "System.ComponentModel.Annotations": "4.5.0"
         },
@@ -10802,6 +10805,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Domain": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.0",
           "NodaTime": "2.4.4"
         },
@@ -17842,7 +17846,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "x/3d5xb+mc9e4I2GOOT+HPRWMZLbYjNN/kYKsb0fyUKcWizn/t1CIrGRLIBhv7H0ptYEt+WTTztdPmwSUMyKig==",
+      "sha512": "qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "files": [
